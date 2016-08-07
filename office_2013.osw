@@ -1,0 +1,17 @@
+{
+	"weather_file": "srrl_2013_amy.epw",
+	"seed_file": "seb.osm",
+  "measure_paths": [
+		"./measures"
+	],
+	"steps": [
+		{
+			"measure_dir_name": "create_DOE_prototype_building",
+			"arguments": {
+				"building_type": "MediumOffice",
+        "template": "90.1-2013",
+        "climate_zone": "ASHRAE 169-2006-5B"
+			}
+		}
+	]
+}
