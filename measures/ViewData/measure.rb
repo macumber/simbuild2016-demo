@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'json'
 require 'erb'
 require 'date'
