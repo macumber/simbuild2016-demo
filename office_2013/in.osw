@@ -1,13 +1,13 @@
 {
 	"weather_file": "USA_CO_Denver.Intl.AP.725650_TMY3.epw",
 	"seed_file": null,
-  "out_name": "office_2013.out.osw",
-  "run_directory": "office_2013",
+  "out_name": "out.osw",
+  "run_directory": "run",
   "measure_paths": [
-		"./measures"
+		"./../measures"
 	],
   "file_paths": [
- 		"./files" 
+ 		"./../files" 
   ],
 	"steps": [
 		{
