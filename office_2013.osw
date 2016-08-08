@@ -1,9 +1,13 @@
 {
-	"weather_file": "srrl_2013_amy.epw",
-	"seed_file": "seb.osm",
+	"weather_file": "USA_CO_Denver.Intl.AP.725650_TMY3.epw",
+	"seed_file": null,
+  "out_name": "office_2013.out.osw",
   "measure_paths": [
 		"./measures"
 	],
+  "file_paths": [
+ 		"./files" 
+  ],
 	"steps": [
 		{
 			"measure_dir_name": "create_DOE_prototype_building",
