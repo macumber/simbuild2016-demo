@@ -17,6 +17,21 @@
         "template": "90.1-2013",
         "climate_zone": "ASHRAE 169-2006-5B"
 			}
-		}
+		},
+		{
+			"measure_dir_name": "StandardReports",
+			"arguments": {
+			}
+		},
+		{
+			"measure_dir_name": "ZoneReport",
+			"arguments": {
+			}
+		},
+		{
+			"measure_dir_name": "ViewData",
+			"arguments": {
+			}
+		}        
 	]
 }
