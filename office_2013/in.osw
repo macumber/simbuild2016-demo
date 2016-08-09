@@ -1,45 +1,45 @@
 {
-	"weather_file": "USA_CO_Denver.Intl.AP.725650_TMY3.epw",
-	"seed_file": null,
+  "weather_file": "USA_CO_Denver.Intl.AP.725650_TMY3.epw",
+  "seed_file": null,
   "out_name": "out.osw",
   "run_directory": "run",
   "measure_paths": [
-		"./../measures"
-	],
-  "file_paths": [
- 		"./../files" 
+    "./../measures"
   ],
-	"steps": [
-		{
-			"measure_dir_name": "create_DOE_prototype_building",
-			"arguments": {
-				"building_type": "MediumOffice",
+  "file_paths": [
+    "./../files" 
+  ],
+  "steps": [
+    {
+      "measure_dir_name": "create_DOE_prototype_building",
+      "arguments": {
+        "building_type": "MediumOffice",
         "template": "90.1-2013",
         "climate_zone": "ASHRAE 169-2006-5B"
-			}
-		},
-		{
-			"measure_dir_name": "ViewModel",
-			"arguments": {
-			}
-		},
-		{
-			"measure_dir_name": "austin_energy_tariff_selection_and_model_setup",
-			"arguments": {
+      }
+    },
+    {
+      "measure_dir_name": "ViewModel",
+      "arguments": {
+      }
+    },
+    {
+      "measure_dir_name": "austin_energy_tariff_selection_and_model_setup",
+      "arguments": {
         "DistrictCooling_Facility": "*None*",
         "ElectricityPurchased_Facility": "Commercial Inside Primary 0 to 3 MW GreenChoice Patron",
         "Gas_Facility": "Commercial"
-			}
-		},
-		{
-			"measure_dir_name": "StandardReports",
-			"arguments": {
-			}
-		},
-		{
-			"measure_dir_name": "austin_energy_eda_reporting_and_qaqc",
-			"arguments": {
-			}
-		}           
-	]
+      }
+    },
+    {
+      "measure_dir_name": "StandardReports",
+      "arguments": {
+      }
+    },
+    {
+      "measure_dir_name": "austin_energy_eda_reporting_and_qaqc",
+      "arguments": {
+      }
+    }           
+  ]
 }
