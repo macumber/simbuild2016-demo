@@ -29,11 +29,6 @@
       }
     },
     {
-      "measure_dir_name": "AedgSmallToMediumOfficeEnvelopeAndEntryInfiltration",
-      "arguments": {
-      }
-    },
-    {
       "measure_dir_name": "AedgSmallToMediumOfficeExteriorDoorConstruction",
       "arguments": {
       }
@@ -65,11 +60,6 @@
     },
     {
       "measure_dir_name": "AedgSmallToMediumOfficeInteriorLighting",
-      "arguments": {
-      }
-    },
-    {
-      "measure_dir_name": "AedgSmallToMediumOfficeInteriorLightingControls",
       "arguments": {
       }
     },
