@@ -19,6 +19,11 @@
 			}
 		},
 		{
+			"measure_dir_name": "ViewModel",
+			"arguments": {
+			}
+		},
+		{
 			"measure_dir_name": "austin_energy_tariff_selection_and_model_setup",
 			"arguments": {
         "DistrictCooling_Facility": "*None*",
