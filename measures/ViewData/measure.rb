@@ -198,6 +198,10 @@ class ViewData < OpenStudio::Ruleset::ReportingUserScript
     # find the environment period
     env_period = nil
     sqlFile.availableEnvPeriods.each do |p|
+      puts "p = '#{p}'"
+      puts "path = '#{sqlFile.path}'"
+      puts 'WeatherRunPeriod'.to_EnvironmentType
+      puts sqlFile.environmentType(p).empty?
       if 'WeatherRunPeriod'.to_EnvironmentType == sqlFile.environmentType(p).get
         env_period = p
         break

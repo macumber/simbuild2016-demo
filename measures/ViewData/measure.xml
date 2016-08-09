@@ -2,8 +2,8 @@
   <schema_version>3.0</schema_version>
   <name>view_data</name>
   <uid>18cf0de7-48b8-48dc-ab68-0dd29f0b8bd0</uid>
-  <version_id>9aef4585-027b-42e2-9077-393e86382df3</version_id>
-  <version_modified>20160808T205828Z</version_modified>
+  <version_id>3c3523f8-4c11-4b18-811c-105271e91b08</version_id>
+  <version_modified>20160809T021142Z</version_modified>
   <xml_checksum>2C8A3EEF</xml_checksum>
   <class_name>ViewData</class_name>
   <display_name>ViewData</display_name>
@@ -133,7 +133,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>C7658373</checksum>
+      <checksum>EAA70951</checksum>
     </file>
   </files>
 </measure>

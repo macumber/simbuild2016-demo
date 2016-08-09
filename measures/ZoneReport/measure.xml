@@ -2,7 +2,8 @@
   <schema_version>3.0</schema_version>
   <name>zone_report</name>
   <uid>81ac119f-4841-434c-9e11-824310fe1cb7</uid>
-  <version_id>888adefa-b117-423b-8632-728680a0e0d7</version_id>
+  <version_id>54e31843-f60b-4d68-bcc5-ba8b4e9ac2c0</version_id>
+  <version_modified>20160808T211121Z</version_modified>
   <xml_checksum>2C8A3EEF</xml_checksum>
   <class_name>ZoneReport</class_name>
   <display_name>Zone Report</display_name>
@@ -39,6 +40,12 @@
       <checksum>6CF87C6E</checksum>
     </file>
     <file>
+      <filename>report.html.in</filename>
+      <filetype>in</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>9863EEC5</checksum>
+    </file>
+    <file>
       <version>
         <software_program>OpenStudio</software_program>
         <identifier>1.5.0</identifier>
@@ -47,13 +54,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>9B0B1AB4</checksum>
-    </file>
-    <file>
-      <filename>report.html.in</filename>
-      <filetype>in</filetype>
-      <usage_type>resource</usage_type>
-      <checksum>9863EEC5</checksum>
+      <checksum>E28F062E</checksum>
     </file>
   </files>
 </measure>

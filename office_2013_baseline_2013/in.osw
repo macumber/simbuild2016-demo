@@ -18,6 +18,14 @@
         "climate_zone": "ASHRAE 169-2006-5B"
 			}
 		},
+    {
+			"measure_dir_name": "create_performance_rating_method_baseline_building",
+			"arguments": {
+				"standard": "90.1-2013",
+        "building_type": "MediumOffice",
+        "climate_zone": "ASHRAE 169-2006-5B"
+			}
+		},
 		{
 			"measure_dir_name": "StandardReports",
 			"arguments": {

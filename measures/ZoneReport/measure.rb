@@ -684,13 +684,13 @@ class ZoneReport < OpenStudio::Ruleset::ReportingUserScript
       strvec_HVACEquipment_query << "ReportForString='Entire Facility'"
       strvec_HVACEquipment_query << "ORDER BY TableName, ColumnName, RowName, Units, Value"
 
-      query_results = @sqlFile.execAndReturnVectorOfString(strvec_HVACEquipment_query).get
+      query_results = @sqlFile.execAndReturnVectorOfString(strvec_HVACEquipment_query)
 
-      if query_results.empty?
+      if query_results.empty? || query_results.get.empty?
         @runner.registerError("Could not get data for requested Column #{colName}.")
         return []
       else
-        return query_results
+        return query_results.get
       end
   end
 
