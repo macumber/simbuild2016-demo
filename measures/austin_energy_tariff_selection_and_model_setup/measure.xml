@@ -1,0 +1,623 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>austin_energy_tariff_selection_and_model_setup</name>
+  <uid>1deeea14-9a6b-4fe4-8664-ba38e50b83f2</uid>
+  <version_id>9fdfad84-bf8e-40bf-b06a-77b1d0235bca</version_id>
+  <version_modified>20160809T040057Z</version_modified>
+  <xml_checksum>10464C4E</xml_checksum>
+  <class_name>AustinEnergyTariffSelectionAndModelSetup</class_name>
+  <display_name>Austin Energy Tariff Selection and Model Setup</display_name>
+  <description>Adds the selected Austin Energy utility rates, as well as set the timestep and lifecycle costing parameters as required by the Austin Energy EDA program.</description>
+  <modeler_description>The timestep for the simulation will be changed to four timesteps per hour to me more compatible with a variety of demand window lengths that may be in tariff objects in the resources directory. Sets the lifecycle costing parameters to use NIST 2012 inflation and fuel escalation numbers.</modeler_description>
+  <arguments>
+    <argument>
+      <name>DistrictCooling_Facility</name>
+      <display_name>Select a Tariff for DistrictCooling:Facility.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>*None*</default_value>
+      <choices>
+        <choice>
+          <value>*None*</value>
+          <display_name>*None*</display_name>
+        </choice>
+        <choice>
+          <value>Domain</value>
+          <display_name>Domain</display_name>
+        </choice>
+        <choice>
+          <value>Downtown</value>
+          <display_name>Downtown</display_name>
+        </choice>
+        <choice>
+          <value>Mueller Energy Center</value>
+          <display_name>Mueller Energy Center</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>ElectricityPurchased_Facility</name>
+      <display_name>Select a Tariff for ElectricityPurchased:Facility.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>*None*</default_value>
+      <choices>
+        <choice>
+          <value>*None*</value>
+          <display_name>*None*</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Primary 0 to 3 MW GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Inside Primary 0 to 3 MW GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Primary 0 to 3 MW GreenChoice Patron</value>
+          <display_name>Commercial Inside Primary 0 to 3 MW GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Primary 0 to 3 MW</value>
+          <display_name>Commercial Inside Primary 0 to 3 MW</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Primary 20 MW or more GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Inside Primary 20 MW or more GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Primary 20 MW or more GreenChoice Patron</value>
+          <display_name>Commercial Inside Primary 20 MW or more GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Primary 20 MW or more</value>
+          <display_name>Commercial Inside Primary 20 MW or more</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Primary 3 MW to 20 MW GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Inside Primary 3 MW to 20 MW GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Primary 3 MW to 20 MW GreenChoice Patron</value>
+          <display_name>Commercial Inside Primary 3 MW to 20 MW GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Primary 3 MW to 20 MW</value>
+          <display_name>Commercial Inside Primary 3 MW to 20 MW</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Secondary 0 to 10 kW GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Inside Secondary 0 to 10 kW GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Secondary 0 to 10 kW GreenChoice Patron</value>
+          <display_name>Commercial Inside Secondary 0 to 10 kW GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Secondary 0 to 10 kW</value>
+          <display_name>Commercial Inside Secondary 0 to 10 kW</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Secondary 10 to 50 kW GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Inside Secondary 10 to 50 kW GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Secondary 10 to 50 kW GreenChoice Patron</value>
+          <display_name>Commercial Inside Secondary 10 to 50 kW GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Secondary 10 to 50 kW</value>
+          <display_name>Commercial Inside Secondary 10 to 50 kW</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Secondary 50 kW or more GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Inside Secondary 50 kW or more GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Secondary 50 kW or more GreenChoice Patron</value>
+          <display_name>Commercial Inside Secondary 50 kW or more GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Inside Secondary 50 kW or more</value>
+          <display_name>Commercial Inside Secondary 50 kW or more</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Primary 0 to 3 MW GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Outside Primary 0 to 3 MW GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Primary 0 to 3 MW GreenChoice Patron</value>
+          <display_name>Commercial Outside Primary 0 to 3 MW GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Primary 0 to 3 MW</value>
+          <display_name>Commercial Outside Primary 0 to 3 MW</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Primary 20 MW or more GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Outside Primary 20 MW or more GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Primary 20 MW or more GreenChoice Patron</value>
+          <display_name>Commercial Outside Primary 20 MW or more GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Primary 20 MW or more</value>
+          <display_name>Commercial Outside Primary 20 MW or more</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Primary 3 MW to 20 MW GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Outside Primary 3 MW to 20 MW GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Primary 3 MW to 20 MW GreenChoice Patron</value>
+          <display_name>Commercial Outside Primary 3 MW to 20 MW GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Primary 3 MW to 20 MW</value>
+          <display_name>Commercial Outside Primary 3 MW to 20 MW</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Secondary 0 to 10 kW GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Outside Secondary 0 to 10 kW GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Secondary 0 to 10 kW GreenChoice Patron</value>
+          <display_name>Commercial Outside Secondary 0 to 10 kW GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Secondary 0 to 10 kW</value>
+          <display_name>Commercial Outside Secondary 0 to 10 kW</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Secondary 10 to 50 kW GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Outside Secondary 10 to 50 kW GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Secondary 10 to 50 kW GreenChoice Patron</value>
+          <display_name>Commercial Outside Secondary 10 to 50 kW GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Secondary 10 to 50 kW</value>
+          <display_name>Commercial Outside Secondary 10 to 50 kW</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Secondary 50 kW or more GreenChoice BusinessCents or Energizer</value>
+          <display_name>Commercial Outside Secondary 50 kW or more GreenChoice BusinessCents or Energizer</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Secondary 50 kW or more GreenChoice Patron</value>
+          <display_name>Commercial Outside Secondary 50 kW or more GreenChoice Patron</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Outside Secondary 50 kW or more</value>
+          <display_name>Commercial Outside Secondary 50 kW or more</display_name>
+        </choice>
+        <choice>
+          <value>Residential Inside GreenChoice SmartCents</value>
+          <display_name>Residential Inside GreenChoice SmartCents</display_name>
+        </choice>
+        <choice>
+          <value>Residential Inside</value>
+          <display_name>Residential Inside</display_name>
+        </choice>
+        <choice>
+          <value>Residential Outside GreenChoice SmartCents</value>
+          <display_name>Residential Outside GreenChoice SmartCents</display_name>
+        </choice>
+        <choice>
+          <value>Residential Outside</value>
+          <display_name>Residential Outside</display_name>
+        </choice>
+      </choices>
+    </argument>
+    <argument>
+      <name>Gas_Facility</name>
+      <display_name>Select a Tariff for Gas:Facility.</display_name>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <default_value>*None*</default_value>
+      <choices>
+        <choice>
+          <value>*None*</value>
+          <display_name>*None*</display_name>
+        </choice>
+        <choice>
+          <value>Commercial Large Volume</value>
+          <display_name>Commercial Large Volume</display_name>
+        </choice>
+        <choice>
+          <value>Commercial</value>
+          <display_name>Commercial</display_name>
+        </choice>
+        <choice>
+          <value>Residential</value>
+          <display_name>Residential</display_name>
+        </choice>
+      </choices>
+    </argument>
+  </arguments>
+  <provenances/>
+  <tags>
+    <tag>Economics.Life Cycle Cost Analysis</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Function</name>
+      <value>Measure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Requires EnergyPlus Results</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Uses SketchUp API</name>
+      <value>false</value>
+      <datatype>boolean</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Analysis Spreadsheet</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>New Construction EE</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Retrofit EE</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Measure Type</name>
+      <value>EnergyPlusMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Analysis Spreadsheet</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>New Construction EE</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Retrofit EE</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>EnvelopeAndLoadTestModel_01.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>E11F67BD</checksum>
+    </file>
+    <file>
+      <filename>os_lib_helper_methods.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>9336238A</checksum>
+    </file>
+    <file>
+      <filename>Downtown.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>840C5436</checksum>
+    </file>
+    <file>
+      <filename>austin_energy_tariff_selection_and_model_setup_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>8D783104</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Secondary 50 kW or more.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>39D9A3A5</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Secondary 50 kW or more.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>4085CF39</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Secondary 0 to 10 kW GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>666C08CC</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Secondary 0 to 10 kW GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>3D621F00</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Secondary 0 to 10 kW.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>D63294B0</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Secondary 10 to 50 kW GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>46C36DB3</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Secondary 10 to 50 kW GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>AFD85066</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Secondary 10 to 50 kW.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>EE37EB8E</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Secondary 50 kW or more GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>83D4EC89</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Secondary 50 kW or more GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>23EED9A3</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Secondary 0 to 10 kW GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>8A7820B6</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Secondary 0 to 10 kW GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>DD6EBB93</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Secondary 0 to 10 kW.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>6240B993</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Secondary 10 to 50 kW GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>B35FA275</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Secondary 10 to 50 kW GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>E526998F</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Secondary 10 to 50 kW.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>34644D78</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Secondary 50 kW or more GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>2B2F0D62</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Secondary 50 kW or more GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>730A4959</checksum>
+    </file>
+    <file>
+      <filename>Residential Inside GreenChoice SmartCents.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>352FAC2F</checksum>
+    </file>
+    <file>
+      <filename>Residential Inside.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>B620D5EE</checksum>
+    </file>
+    <file>
+      <filename>Residential Outside GreenChoice SmartCents.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>F38A57EF</checksum>
+    </file>
+    <file>
+      <filename>Residential Outside.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>D6D9AAE7</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Primary 0 to 3 MW GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>61F390B5</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Primary 0 to 3 MW GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>9B270C06</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Primary 0 to 3 MW.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>F6BB6982</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Primary 20 MW or more GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>B5B1569B</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Primary 20 MW or more GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>6A180FE8</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Primary 20 MW or more.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>35A01BFA</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Primary 3 MW to 20 MW GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>7EECA773</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Primary 3 MW to 20 MW GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>4515D84B</checksum>
+    </file>
+    <file>
+      <filename>Commercial Inside Primary 3 MW to 20 MW.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>26CE4348</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Primary 0 to 3 MW GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>E387F38C</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Primary 0 to 3 MW GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>C1C32B3B</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Primary 0 to 3 MW.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>2E9694B1</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Primary 20 MW or more GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>535C7C83</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Primary 20 MW or more GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>A13DA373</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Primary 20 MW or more.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>1F866062</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Primary 3 MW to 20 MW GreenChoice BusinessCents or Energizer.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>B6827071</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Primary 3 MW to 20 MW GreenChoice Patron.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>CF5EFAF2</checksum>
+    </file>
+    <file>
+      <filename>Commercial Outside Primary 3 MW to 20 MW.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>42522530</checksum>
+    </file>
+    <file>
+      <filename>Domain.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>D6097CBD</checksum>
+    </file>
+    <file>
+      <filename>Mueller Energy Center.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>F2F321E5</checksum>
+    </file>
+    <file>
+      <filename>Commercial.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>FCF4B0AE</checksum>
+    </file>
+    <file>
+      <filename>Commercial Large Volume.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>91B6EE70</checksum>
+    </file>
+    <file>
+      <filename>Residential.idf</filename>
+      <filetype>idf</filetype>
+      <usage_type>resource</usage_type>
+      <checksum>FDDFBFF3</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.6.0</identifier>
+        <min_compatible>1.6.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>E11A3924</checksum>
+    </file>
+  </files>
+</measure>

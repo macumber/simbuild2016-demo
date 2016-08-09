@@ -1,0 +1,27 @@
+UtilityCost:Tariff,
+  Downtown,                !- Name
+  DistrictCooling:Facility,               !- Output Meter Name
+  UserDefined,                            !- Conversion Factor Choice
+  7.898E-8,                               !- Energy Conversion Factor, 1 J = 7.898E-8 ton-hrs 
+  2.843E-4,                               !- Demand Conversion Factor, 1 W = 2.843E-4 tons of refrigeration
+  ,                                       !- Time of Use Period Schedule Name
+  ,                                       !- Season Schedule Name
+  ,                                       !- Month Schedule Name
+  QuarterHour,                            !- Demand Window Length
+  0.0;                                    !- Monthly Charge or Variable Name
+
+UtilityCost:Charge:Simple,
+  District_Cooling_Energy_Charge,         !- Name
+  Downtown,                               !- Tariff Name
+  totalEnergy,                            !- Source Variable
+  Annual,                                 !- Season
+  EnergyCharges,                          !- Category Variable Name
+  0.11;                                   !- Cost per Unit Value or Variable Name
+
+UtilityCost:Charge:Simple,
+  District_Cooling_Demand_Charge-Gas,     !- Name
+  Downtown,                               !- Tariff Name
+  totalDemand,                            !- Source Variable
+  Annual,                                 !- Season
+  DemandCharges,                          !- Category Variable Name
+  0.0;                                    !- Cost per Unit Value or Variable Name

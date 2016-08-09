@@ -1,0 +1,49 @@
+UtilityCost:Tariff,
+  Commercial_Outside_Secondary_10_to_50_kW_GreenChoice_Patron,                         ! Name
+  ElectricityPurchased:Facility,          !- Output Meter Name
+  KWh,                                    ! Conversion Factor Choice
+  ,                                       ! Energy Conversion Factor
+  ,                                       ! Demand Conversion Factor
+  ,                                       ! Time of Use Period Schedule Name
+  TwoSeasonSchedule,                      ! Season Schedule Name
+  ,                                       ! Month Schedule Name
+  ,                                       ! Demand Window Length
+  25,                      ! Monthly Charge or Variable Name
+  ;                                       ! Minimum Monthly Charge or Variable Name
+
+UtilityCost:Charge:Simple,
+  SummerEnergyCharge,                     !- Name
+  Commercial_Outside_Secondary_10_to_50_kW_GreenChoice_Patron,                         !- Tariff Name
+  totalEnergy,                            !- Source Variable
+  summer,                                 !- Season
+  EnergyCharges,                          !- Category Variable Name
+  0.07883;                       !- Cost per Unit Value or Variable Name
+
+UtilityCost:Charge:Simple,
+  WinterEnergyCharge,                     !- Name
+  Commercial_Outside_Secondary_10_to_50_kW_GreenChoice_Patron,                         !- Tariff Name
+  totalEnergy,                            !- Source Variable
+  winter,                                 !- Season
+  EnergyCharges,                          !- Category Variable Name
+  0.07386;                       !- Cost per Unit Value or Variable Name
+
+UtilityCost:Charge:Simple,
+  SummerDemandCharge,                     !- Name
+  Commercial_Outside_Secondary_10_to_50_kW_GreenChoice_Patron,                         !- Tariff Name
+  totalDemand,                            !- Source Variable
+  summer,                                 !- Season
+  DemandCharges,                          !- Category Variable Name
+  12.9;                       !- Cost per Unit Value or Variable Name
+
+UtilityCost:Charge:Simple,
+  WinterDemandCharge,                     !- Name
+  Commercial_Outside_Secondary_10_to_50_kW_GreenChoice_Patron,                         !- Tariff Name
+  totalDemand,                            !- Source Variable
+  winter,                                 !- Season
+  DemandCharges,                          !- Category Variable Name
+  11.91;                       !- Cost per Unit Value or Variable Name
+
+Schedule:Compact, TwoSeasonSchedule, number,
+  Through: 5/31, For: AllDays, Until: 24:00, 1,
+  Through: 9/30, For: AllDays, Until: 24:00, 3,
+  Through: 12/31, For: AllDays, Until: 24:00, 1;
