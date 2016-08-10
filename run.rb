@@ -6,7 +6,8 @@ do_run = true
 openstudio_path = ARGV[0]
 
 if !openstudio_path
-  openstudio_path = 'E:\openstudio-2-0e\core-build\Products\Release\openstudio.exe'
+  puts "usage: ruby run.rb /path/to/cli/openstudio.exe'"
+  exit
 end
 
 # clean out old files
