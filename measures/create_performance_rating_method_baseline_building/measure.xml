@@ -2,9 +2,9 @@
   <schema_version>3.0</schema_version>
   <name>create_performance_rating_method_baseline_building</name>
   <uid>0474f1c8-11cf-477c-9bd6-2091207ddf42</uid>
-  <version_id>8e560757-14dc-440a-a52e-b639b5e624e0</version_id>
-  <version_modified>20160809T021142Z</version_modified>
-  <xml_checksum>057E8D9D</xml_checksum>
+  <version_id>6f267d8c-5fa1-4a91-b80a-4863ff79c04d</version_id>
+  <version_modified>20160922T015441Z</version_modified>
+  <xml_checksum>BCB7218E</xml_checksum>
   <class_name>CreatePerformanceRatingMethodBaselineBuilding</class_name>
   <display_name>Create Performance Rating Method Baseline Building</display_name>
   <description>Creates the Performance Rating Method baseline building.  For 90.1, this is the Appendix G aka LEED Baseline.  For India ECBC, this is the Appendix D Baseline.  Note: for 90.1, this model CANNOT be used for code compliance; it is not the same as the Energy Cost Budget baseline.</description>
@@ -218,6 +218,7 @@
       </choices>
     </argument>
   </arguments>
+  <outputs/>
   <provenances/>
   <tags>
     <tag>Whole Building.Space Types</tag>

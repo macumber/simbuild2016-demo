@@ -2,9 +2,9 @@
   <schema_version>3.0</schema_version>
   <name>aedg_small_to_medium_office_fenestration_and_daylighting_controls</name>
   <uid>4252d6c7-ccd5-4cae-b55e-8d7b1dfcc717</uid>
-  <version_id>02c3c423-2d33-4f83-9621-8fb74c6340b7</version_id>
-  <version_modified>20160612T040446Z</version_modified>
-  <xml_checksum>6FAFA9DE</xml_checksum>
+  <version_id>1d694899-dd60-4816-aafe-0b8359b304c5</version_id>
+  <version_modified>20160922T015431Z</version_modified>
+  <xml_checksum>BCB7218E</xml_checksum>
   <class_name>AedgSmallToMediumOfficeFenestrationAndDaylightingControls</class_name>
   <display_name>AedgSmallToMediumOfficeFenestrationAndDaylightingControls</display_name>
   <description>This measure will remove all existing exterior windows, glass doors, and skylights from your model. They will be replaced with view and daylight windows as recommended by the Small to Medium Office AEDG recommendations. Windows on the south facade will have a exterior shading or light shelf surfaces depending on if they are view or daylight windows. East and west view windows will have internal shading controls. In spaces with daylighting controls daylight sensor will be added. The modeler should inspect where the sensors were placed, the recommended illuminance setpoint, and the fraction of the zones lighting controlled by the sensor.</description>
@@ -51,6 +51,7 @@
       <default_value>0</default_value>
     </argument>
   </arguments>
+  <outputs/>
   <provenances/>
   <tags>
     <tag>Envelope.Fenestration</tag>

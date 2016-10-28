@@ -2,9 +2,9 @@
   <schema_version>3.0</schema_version>
   <name>austin_energy_tariff_selection_and_model_setup</name>
   <uid>1deeea14-9a6b-4fe4-8664-ba38e50b83f2</uid>
-  <version_id>9fdfad84-bf8e-40bf-b06a-77b1d0235bca</version_id>
-  <version_modified>20160809T040057Z</version_modified>
-  <xml_checksum>10464C4E</xml_checksum>
+  <version_id>d33a129d-2c98-4f1a-b021-57f5b2f4bcbe</version_id>
+  <version_modified>20160922T015440Z</version_modified>
+  <xml_checksum>6576546E</xml_checksum>
   <class_name>AustinEnergyTariffSelectionAndModelSetup</class_name>
   <display_name>Austin Energy Tariff Selection and Model Setup</display_name>
   <description>Adds the selected Austin Energy utility rates, as well as set the timestep and lifecycle costing parameters as required by the Austin Energy EDA program.</description>
@@ -237,6 +237,7 @@
       </choices>
     </argument>
   </arguments>
+  <outputs/>
   <provenances/>
   <tags>
     <tag>Economics.Life Cycle Cost Analysis</tag>

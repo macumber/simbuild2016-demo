@@ -2,9 +2,9 @@
   <schema_version>3.0</schema_version>
   <name>aedg_small_to_medium_office_exterior_door_construction</name>
   <uid>d9dd27f7-d622-4d85-96e4-c09fcd15603c</uid>
-  <version_id>b530738a-9055-409b-a533-895722c67ffd</version_id>
-  <version_modified>20160612T040445Z</version_modified>
-  <xml_checksum>1E963D9C</xml_checksum>
+  <version_id>b075b43d-c108-4b2e-a508-407a16b2a528</version_id>
+  <version_modified>20160922T015430Z</version_modified>
+  <xml_checksum>BCB7218E</xml_checksum>
   <class_name>AedgSmallToMediumOfficeExteriorDoorConstruction</class_name>
   <display_name>AedgSmallToMediumOfficeExteriorDoorConstruction</display_name>
   <description>This measure is intended for use on opaque doors; if doors are glass they should be treated as windows. OpenStudio does have a unique object for overhead doors versus standard doors. This measure doesn't alter infiltration. There is a separate measure for infiltration that includes user arguments for primary entry points. </description>
@@ -22,6 +22,7 @@
       <default_value>0</default_value>
     </argument>
   </arguments>
+  <outputs/>
   <provenances/>
   <tags>
     <tag>Envelope.Opaque</tag>

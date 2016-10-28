@@ -2,9 +2,9 @@
   <schema_version>3.0</schema_version>
   <name>aedg_small_to_medium_office_interior_lighting_controls</name>
   <uid>57ba8820-6394-4c76-86c3-cc045a8a2b26</uid>
-  <version_id>74f78c85-2924-4648-868a-440317ad6191</version_id>
-  <version_modified>20160612T040447Z</version_modified>
-  <xml_checksum>9B7BB4D8</xml_checksum>
+  <version_id>8631dfcb-35b3-4084-beab-756014e58077</version_id>
+  <version_modified>20160922T015431Z</version_modified>
+  <xml_checksum>BCB7218E</xml_checksum>
   <class_name>AedgSmallToMediumOfficeInteriorLightingControls</class_name>
   <display_name>AedgSmallToMediumOfficeInteriorLightingControls</display_name>
   <description>This measure reduces the values associated with lighting schedules to simulate reductions due to vacancy sensors throughout the building.</description>
@@ -19,6 +19,7 @@
       <default_value>0</default_value>
     </argument>
   </arguments>
+  <outputs/>
   <provenances/>
   <tags>
     <tag>Electric Lighting.Electric Lighting Controls</tag>

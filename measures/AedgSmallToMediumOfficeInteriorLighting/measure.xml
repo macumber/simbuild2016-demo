@@ -2,8 +2,9 @@
   <schema_version>3.0</schema_version>
   <name>aedg_small_to_medium_office_interior_lighting</name>
   <uid>e1e16b8f-5cbf-447c-9f76-7fe69b3cf01e</uid>
-  <version_id>f5dbe903-57b7-4c59-bae6-fd22798cd258</version_id>
-  <xml_checksum>2DDDDD82</xml_checksum>
+  <version_id>38d58f4a-5034-43fe-86a6-780ebe7f25da</version_id>
+  <version_modified>20160922T015431Z</version_modified>
+  <xml_checksum>BCB7218E</xml_checksum>
   <class_name>AedgSmallToMediumOfficeInteriorLighting</class_name>
   <display_name>AedgSmallToMediumOfficeInteriorLighting</display_name>
   <description>This measure removes all existing lighting objects from spaces recognized as primary or secondary school space types. New lighting will be added based on the 50% Small to Medium Office AEDG recommendations.</description>
@@ -18,6 +19,7 @@
       <default_value>0</default_value>
     </argument>
   </arguments>
+  <outputs/>
   <provenances/>
   <tags>
     <tag>Electric Lighting.Lighting Equipment</tag>

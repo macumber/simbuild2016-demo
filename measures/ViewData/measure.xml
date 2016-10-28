@@ -2,9 +2,9 @@
   <schema_version>3.0</schema_version>
   <name>view_data</name>
   <uid>18cf0de7-48b8-48dc-ab68-0dd29f0b8bd0</uid>
-  <version_id>3c3523f8-4c11-4b18-811c-105271e91b08</version_id>
-  <version_modified>20160809T021142Z</version_modified>
-  <xml_checksum>2C8A3EEF</xml_checksum>
+  <version_id>92cbcf83-1f3c-415b-b448-561c0dd98dd8</version_id>
+  <version_modified>20160922T015443Z</version_modified>
+  <xml_checksum>9F9D8C87</xml_checksum>
   <class_name>ViewData</class_name>
   <display_name>ViewData</display_name>
   <description>Visualize energy simulation data plotted on an OpenStudio model in a web based viewer</description>
@@ -71,6 +71,7 @@
       <default_value>Zone Mean Radiant Temperature</default_value>
     </argument>
   </arguments>
+  <outputs/>
   <provenances/>
   <tags>
     <tag>Reporting.QAQC</tag>

@@ -2,13 +2,15 @@
   <schema_version>3.0</schema_version>
   <name>standard_reports</name>
   <uid>b4c51589-07c6-4f04-a36e-2651be56ffc4</uid>
-  <version_id>872221ec-073e-485b-b5f0-f2fccafc27d8</version_id>
-  <xml_checksum>2C8A3EEF</xml_checksum>
+  <version_id>ebac7de3-a1e6-45ee-b476-8b700d5f343e</version_id>
+  <version_modified>20160922T015442Z</version_modified>
+  <xml_checksum>9F9D8C87</xml_checksum>
   <class_name>StandardReports</class_name>
   <display_name>Standard Reports</display_name>
   <description>Change me</description>
   <modeler_description>Change me</modeler_description>
   <arguments/>
+  <outputs/>
   <provenances/>
   <tags>
     <tag>Reporting.QAQC</tag>
@@ -39,6 +41,12 @@
       <checksum>08BEC29E</checksum>
     </file>
     <file>
+      <filename>StandardReports_Test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>01334061</checksum>
+    </file>
+    <file>
       <version>
         <software_program>OpenStudio</software_program>
         <identifier>1.1.2</identifier>
@@ -47,13 +55,7 @@
       <filename>measure.rb</filename>
       <filetype>rb</filetype>
       <usage_type>script</usage_type>
-      <checksum>C9EC2947</checksum>
-    </file>
-    <file>
-      <filename>StandardReports_Test.rb</filename>
-      <filetype>rb</filetype>
-      <usage_type>test</usage_type>
-      <checksum>01334061</checksum>
+      <checksum>6CAFC5B6</checksum>
     </file>
   </files>
 </measure>

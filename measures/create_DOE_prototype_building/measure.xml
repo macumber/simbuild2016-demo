@@ -2,9 +2,9 @@
   <schema_version>3.0</schema_version>
   <name>create_doe_prototype_building</name>
   <uid>be90fd0b-a651-467a-bc8d-29d310b0f937</uid>
-  <version_id>3270eb2d-977f-4547-a5a7-e08500be512b</version_id>
-  <version_modified>20160809T231946Z</version_modified>
-  <xml_checksum>057E8D9D</xml_checksum>
+  <version_id>7bceb406-1bad-480c-90fc-c83685368f7e</version_id>
+  <version_modified>20160922T043336Z</version_modified>
+  <xml_checksum>BCB7218E</xml_checksum>
   <class_name>CreateDOEPrototypeBuilding</class_name>
   <display_name>Create DOE Prototype Building</display_name>
   <description>Creates the DOE Reference Building Models as starting points for other analyses.</description>
@@ -527,6 +527,7 @@
       </choices>
     </argument>
   </arguments>
+  <outputs/>
   <provenances/>
   <tags>
     <tag>Whole Building.Space Types</tag>

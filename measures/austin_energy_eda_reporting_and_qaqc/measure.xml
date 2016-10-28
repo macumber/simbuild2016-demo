@@ -2,14 +2,15 @@
   <schema_version>3.0</schema_version>
   <name>austin_energy_eda_reporting_and_qaqc</name>
   <uid>114730e7-c747-4faa-9911-3a49c2559354</uid>
-  <version_id>b8886562-84d5-42d6-b7a7-2d969277dab4</version_id>
-  <version_modified>20160809T021142Z</version_modified>
-  <xml_checksum>6B256116</xml_checksum>
+  <version_id>e61bd9a1-6136-439a-8cdc-8866bac30a44</version_id>
+  <version_modified>20160922T015432Z</version_modified>
+  <xml_checksum>E3F632A6</xml_checksum>
   <class_name>AustinEnergyEDAReportingAndQAQC</class_name>
   <display_name>Austin Energy EDA Reporting and QAQC</display_name>
   <description>This measure extracts key simulation results and performs basic model QAQC checks necessary for the Austin Energy EDA Program.</description>
   <modeler_description>Reads the model and sql file to pull out the necessary information and run the model checks.  The check results show up as warning messages in the measure's output on the PAT run tab.</modeler_description>
   <arguments/>
+  <outputs/>
   <provenances/>
   <tags>
     <tag>Reporting.QAQC</tag>
